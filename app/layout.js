@@ -11,7 +11,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
+export const metadata = {
+  title: "AI Logo Generator",
+  description: "Generate logos using AI",
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -19,7 +22,10 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Provider>
+           {children}
+        </Provider>
+       
       </body>
     </html>
   );
