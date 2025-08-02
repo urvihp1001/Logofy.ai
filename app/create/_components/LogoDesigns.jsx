@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import HeadingDesc from './HeadingDesc'
 import Lookup from '@/app/_data/Lookup'
 import LogoDesig from '@/app/_data/LogoDesig'
-import { set } from 'mongoose';
 
-function LogoDesigns({onHandleInputChange}) {
-     const [selectedOption, setSelectedOption] = useState();
+
+function LogoDesigns({onHandleInputChange, formData}) {
+     const [selectedOption, setSelectedOption] = useState(formData?.design?.title || '');
 return (
     <div className="my-10">
         <HeadingDesc 
@@ -18,7 +18,7 @@ return (
                     key={index}
                     onClick={() => {
                         setSelectedOption(design.title);
-                        onHandleInputChange(design.title);
+                        onHandleInputChange(design);
                     }}
                     className={`rounded-2xl overflow-hidden border-2 ${selectedOption === design.title ? 'border-primary' : 'border-gray-300'} hover:border-primary cursor-pointer transition-shadow w-full`}
                 >

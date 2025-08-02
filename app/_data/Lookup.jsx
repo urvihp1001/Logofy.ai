@@ -14,7 +14,7 @@ export default{
     LogoColorPaletteTitle:'Choose Your Color Palette',
     LogoColorPaletteDesc:'Pick the colors that reflect your brands personality and create a lasting impression.',
     LogoPricingModelTitle:'Select your AI Model Plan',
-    LogoPricingModelDesc:'Generate Unlimted Fast Logo with your fav model',
+    LogoPricingModelDesc:'Generate Unlimited Fast Logo with your fave model',
     LoadingWaitDesc:'✨ Please wait a moment while we work our magic to bring your logo to life.',
     LoadingWaitTitle:'Your logo is being created',
     pricingOption : [
@@ -37,10 +37,12 @@ export default{
                 '⚫ Generate unlimited logos',
                 '⚫ Shorter wait times',
                 '⚫ Wait time: Less than 10 seconds',
-                '⚫ Only 5 Credits',
+                '⚫ Only 5 Credits per logo',
+                '⚫ High Quality Designs and Options',
+               
                 
             ],
-            button:'Generate Free'
+            button:'Generate Premium'
         }
     ],
 }
