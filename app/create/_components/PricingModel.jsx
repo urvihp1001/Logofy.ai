@@ -3,9 +3,10 @@ import HeadingDesc from './HeadingDesc'
 import React, { useEffect } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button';
+import { SignInButton, useUser } from '@clerk/nextjs';
 
 function PricingModel({formData}) {
-    
+    const {user}=useUser();
     useEffect(() => {
         // This effect runs once when the component mounts
        if(formData?.title&& typeof window!== 'undefined') {
@@ -28,9 +29,10 @@ function PricingModel({formData}) {
                                 <p key={idx} className='text-gray-600 text-sm mt-2'>{feature}</p>
                             ))}
                         </div>
-                        <Button>
-                            {pricing.button}
-                        </Button>
+                        {user?
+                    <Button className="mt-5">{pricing.button}</Button> :
+                    <SignInButton></SignInButton>   
+                    }
                     </div>
                 )
             })}
