@@ -1,7 +1,7 @@
 import { Host_Grotesk } from "next/font/google";
 import "./globals.css";
 import Provider from "./provider";
-import { ClerkProvider } from "@clerk/nextjs/dist/types/components.server";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const host_grotesk= Host_Grotesk({
   subsets: ["latin"],
