@@ -7,7 +7,7 @@ import { getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDv6I4d5YtvszfSuk-4C8wL749F1m6chAk",
+  apiKey: "",
   authDomain: "logo-maker-9bd46.firebaseapp.com",
   projectId: "logo-maker-9bd46",
   storageBucket: "logo-maker-9bd46.firebasestorage.app",
